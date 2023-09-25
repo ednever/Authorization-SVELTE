@@ -1,7 +1,3 @@
-<script>
-	import successkid from 'images/successkid.jpg';
-</script>
-
 <style>
 	h1, figure, p {
 		text-align: center;
