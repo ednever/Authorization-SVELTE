@@ -1,13 +1,12 @@
 <script>
-	import { stores } from '@sapper/app';
-	import { post } from 'utils.js';
-
-	export let segment;
+	import { goto, stores } from '@sapper/app';
 	const { page, session } = stores();
+	import { post } from 'utils.js';
+	export let segment;
 
 	async function logout() {
 		await post('auth/logout');
-		$session.user = null;
+		$session.token = null;
 		goto('/');
 	}
 </script>
